@@ -1,3 +1,9 @@
-*.aux
-*.log
+inquiry.aux
+inquiry.log
 inquiry.pdf
+comp_spp.aux
+comp_spp.bbl
+comp_spp.blg
+comp_spp.log
+comp_spp.pdf
+comp_spp.txt

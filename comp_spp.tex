@@ -1,0 +1,691 @@
+\documentclass{article}
+
+\usepackage{upgreek}
+
+\hyphenation{a-mong post-zy-got-ic wheth-er ac-cu-mu-lat-ed}
+
+\title{Compensatory adaptation causes rapid incipient speciation}
+\author{Carlos J. R. Anderson \and Barry L. Williams}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Compensatory mutations suppress the effects of deleterious mutations
+without being beneficial alone.
+%
+Epistatic interactions among compensatory mutations that have
+evolved in separate populations may form an intrinsic
+postzygotic isolating barrier (i.e., hybrid inviability or sterility),
+leading to biological speciation.
+%
+Indeed, about ten percent of genetic differences between species
+comprise compensatory mutations.
+%
+Using populations of digital organisms, we show that
+compensatory adaptation caused more rapid and stronger
+postzygotic isolation than in
+populations evolved through drift.
+%
+Surprisingly, the strength of this isolation was independent
+of the effect size of the original deleterious mutations.
+%
+We also find that
+both deleterious and compensatory mutations
+contribute equally to reproductive isolation.
+%
+Our results suggest that compensatory adaptation may be
+an important genetic mechanism of speciation,
+and supports the view that intrinsic postzygotic isolation
+can stem from intrinsic genetic mechanisms.
+\end{abstract}
+
+
+
+\section*{Introduction}
+
+Biological speciation---%
+the evolution of reproductive isolation between pop\-u\-la\-tions---%
+is thought to be mostly driven by natural selection \cite{coy04,sch09,sob10}.
+%
+Selection can drive the fixation of alternative adaptive alleles
+in different populations, causing populations to diverge genetically.
+%
+Genetic divergence may lead to phenotypic differences
+between populations that prevent them from mating
+or from producing a zygote (`prezygotic isolation').
+%
+Genetic divergence may also lead to hybrid sterility or inviability,
+either because hybrids display intermediate phenotypes
+unsuited to the parental environments (`extrinsic postzygotic isolation')
+or because hybrids acquire developmental or physiological abnormalities
+that occur in any environment (`intrinsic postzygotic isolation').
+%
+Because postzygotic barriers act only after prezygotic barriers,
+postzygotic barriers are believed to contribute less
+to the total reproductive isolation than prezygotic barriers \cite{sch10};
+however, we know little about the relative contribution
+of pre- and postzygotic barriers during the speciation process.
+%
+In any case, reproductive isolation is generally believed
+to be a by-product of adaptation to the external,
+ecological environment \cite{coy04,sob10}.
+
+
+
+Some studies suggest, however, that some reproductive isolation
+may also result from adaptation to the internal, genetic environment
+\cite{pha09,pre10}.
+%
+For instance, deleterious mutations may accumulate in a population
+through genetic drift, hitchhiking with beneficial mutations,
+transient environmental changes, or spread of selfish genetic elements.
+%
+Compensatory mutations---secondary mutations that compensate
+for the effects of deleterious mutations---%
+may subsequently arise and spread through the population
+\cite{har96,bur99,moo00,lev00,mai02,est03,est11}.
+%
+Thus, compensatory mutation are a type of beneficial mutations
+that depend on the presence of one or more deleterious mutations
+(i.e., compensatory mutations are epistatic).
+%
+Because stabilizing selection acts
+to maintain phenotypic function via compensatory adaptation,
+only genotypic, not phenotypic, change occurs~\cite{har96}.
+%
+As a result, populations that undergo compensatory adaptation
+in identical environments will diverge genetically, not phenotypically.
+%
+If compensatory adaptation can lead to genetic divergence,
+independent compensatory adaptation may contribute to
+intrinsic postzygotic isolation \cite{orr01,kon02,kul04,lan07,sch09b,pre10}.
+
+
+
+Intrinsic postzygotic isolation is often caused by
+Dob\-zhan\-sky-Mul\-ler incompatibilities (DMIs) \cite{coy04}---%
+negative interactions among alleles from different species appearing together
+in the hybrid's genetic background \cite{orr95}.
+%
+Deleterious and compensatory mutations accumulated in different populations
+may form DMIs in hybrids \cite{har96}, leading to hybrid inviability
+and potentially to complete postzygotic isolation.
+%
+In support of the hypothesis that compensatory adaptation
+may lead to an accummulation of DMIs,
+comparative studies have found that $\sim$10\%
+of amino acid differences between humans
+and several other mammals \cite{kon02}%
+---and between different species of fruit flies \cite{kul04}---%
+are due to deleterious mutations and their associated compensatory mutations.
+%
+In addition, many genes known to form DMIs
+involve selfish genetic elements
+and their compensatory suppressors \cite{pre10}
+(selfish genetic elements are DNA sequences
+that replicate disproportionally to the rest
+of the genome and are therefore deleterious to the organism).
+
+
+
+Whether compensatory adaptation can lead to postzygotic isolation
+remains to be tested experimentally.
+%
+Such an experiment should be able to answer the following questions:
+(1)~how rapidly does postzygotic isolation evolve?
+(2)~what is the strength of genetic incompatibilities formed?
+and (3)~what is the relative contribution of compensatory mutations
+and deleterious mutations to postzygotic isolation?
+%
+Here we conduct experimental evolution
+of compensatory adaptation to answer these questions
+using Avida \cite{ofr04}, an artificial life system
+where populations of digital organisms
+evolve by natural selection and drift.
+%
+Avida enhances the benefits of microbial systems
+(i.e., short generation times, lots of replication,
+easy manipulation and storage of genomes),
+while being a true instance of evolution of digital genetic systems,
+where the generality of evolutionary principles can be tested
+\cite{len99,ele08,mis06}.
+%
+Specific to this study, Avida allows us to easily insert deleterious mutations
+of various effect sizes, carry out thousands of hybridizations,
+and individually identify compensatory mutations.
+
+
+
+\section*{Results}
+
+Starting with a pair of haploid, sexually-reproducing digital organisms,
+we allowed three replicate populations to adapt to a diverse environment
+for 1,000,000 updates ($\sim$250,000 generations).
+%
+(An update is the standard unit of time in Avida.)
+%
+We used the most common genotype of each adapted population
+as an independent ancestor for all subsequent experiments.
+%
+From the ancestors, we isolated 472 mutants
+with 1-5 random irreversible deleterious mutations
+whose combined fitness effect was either
+small ($\Delta W$~=~0.01-0.1) or large ($\Delta W$~=~0.1-0.9).
+%
+As a control, we also isolated 74 neutral mutants ($\Delta W$~=~0.0)
+with the same range of deleterious mutations per genome as those
+in the small-effect and large-effect treatments (Table~\ref{tbl1}).
+%
+We then allowed populations founded by each mutant (including the controls)
+to evolve for 25,000 updates ($\sim$6,000 generations)
+in identical environmental conditions as their ancestor.
+%
+We regarded a population as compensated if its most common genotype
+(1)~had a fitness at least equal to that that of its ancestor,
+(2)~did not acquire mutations that were beneficial on their own, and
+(3)~did not acquire mutations that were deleterious when they first appeared.
+
+
+
+\subsection*{Reproductive isolation via compensation is rapid}
+
+We performed two types of hybridizations:
+(1)~between compensated (or control) populations and their ancestor (`AC')
+and (2)~between pairs of compensated (or control) populations (`CC').
+%
+The first type of hybridization corresponds to the scenario where
+a population splits off from an ancestral population,
+whereas the second type corresponds to the scenario where
+a population splits into two or more subpopulations.
+%
+All hybrids were generated after completion
+of the compensatory adaptation experiments.
+%
+We found that the mean fitness of hybrids for both hybridization types
+was lower than that of hybrids from control populations
+(in Fig.~\ref{fig1}, compare `Control' hybrids with `Del.~+~Comp.' hybrids).
+%
+Surprisingly, whether populations compensated for
+small- or large-effect deleterious mutations
+did not have a significant effect on mean hybrid fitness
+(in Fig.~\ref{fig1}, the 95\% bootstrap confidence intervals overlap for
+`Small-effect Del.~+~Comp.' and `Large-effect Del.~+~Comp.').
+%
+These findings suggest that intrinsic postzygotic isolation
+can develop faster during compensatory adaptation than during genetic drift,
+regardless of the fitness effect size of the initial deleterious mutations.
+
+
+
+\subsection*{Compensatory adaptation forms strong hybrid incompatibilities}
+
+If hybrids between compensated genotypes
+have stronger genetic incompatibilities
+than hybrids between control genotypes,
+then the rate at which hybrid fitness decays
+with the number of inherited mutations should be greater
+for hybrids between compensated genotypes
+than for hybrids between control genotypes.
+%
+In other words, the slope of the line relating
+the number of mutations in hybrids
+with the hybrid fitness should be greater
+for hybrids between compensated genotypes
+than for hybrids between control genotypes.
+%
+Before we performed this test,
+we generated a new set of 250 control genotypes
+because our experimental control populations
+acquired only 0-1 mutations after 25,000 updates.
+%
+To generate the new control genotypes,
+we introduced 2-10 neutral mutations into ancestral genotypes,
+which was within the range of number of mutations in compensated genotypes.
+%
+We then fit a least squares linear relationship between
+the mean number of mutations in hybrids
+and the hybrid fitness for each treatment
+(i.e., neutral-, small-, and large-effect for both AC and CC hybrids).
+%
+We found that the slope of this linear relationship
+was significantly greater for hybrids between compensated genotypes
+than for hybrids between control genotypes (Fig.~\ref{fig2}B),
+but was not significantly greater for AC hybrids (Fig.~\ref{fig2}A).
+%
+Our findings suggest that genetic incompatibilities
+involving deleterious and compensatory mutations in hybrids
+were stronger than those among neutral mutations.
+
+
+
+\subsection*{Both deleterious and compensatory mutations
+  contribute to reproductive isolation}
+
+Although we have shown that genetic interactions
+involving deleterious and compensatory mutations
+may form strong hybrid incompatibilities rapidly,
+we have yet to quantify the relative contributions
+of each type of mutation to the strength of genetic incompatibilities.
+%
+At first glance, Fig.~\ref{fig1}
+may suggest that compensatory mutations
+contributed little to reproductive isolation
+because hybrids between genotypes before compensation (`Del.~only')
+had fitnesses as low as hybrids after compensation (`Del.~+~Comp.').
+%
+However, hybrids between compensated genotypes
+in which deleterious mutations were reverted to the ancestral state
+also had low fitnesses
+(in Fig.~\ref{fig1}, compare `Comp.~only' hybrids to `Del.~+~Comp.' hybrids),
+suggesting that compensatory mutations
+also contributed to postzygotic isolation.
+%
+To establish more directly the extent
+to which deleterious and compensatory mutations
+contributed to postzygotic isolation,
+we created genotypes with different proportions
+of deleterious and compensatory mutations
+and measured their fitness.
+%
+We created such genotypes by taking contiguous regions of different sizes
+from an evolved parental genotype and substituting them
+into the corresponding region in the ancestral genotype.
+%
+For each new genotype, we first measured its fitness and then calculated
+the proportion of deleterious and compensatory mutations
+relative to the parental genotype.
+%
+We found that, unless genotypes contained either
+all or none of their parent's deleterious and compensatory mutations,
+their fitness was low (Fig.~\ref{fig3}),
+suggesting that both deleterious and compensatory mutations
+are important in postzygotic reproductive isolation.
+
+
+
+\section*{Discussion}
+
+Most genes involved in intrinsic postzygotic isolation,
+i.e., hybrid sterility or inviability
+due to developmental or physiological abnormalities,
+show strong signatures of positive selection \cite{pre10}.
+%
+Surprisingly, many of these genes
+are not adaptations to the external, ecological environment
+but to an impaired internal, genetic environment
+(see Table~\ref{tbl1} in \cite{pre10}).
+%
+An example of adaptation to an impaired genetic environment
+is adaptive compensation of deleterious mutations
+\cite{har96,bur99,moo00,lev00,mai02,est03,est11}.
+%
+Populations undergoing independent compensatory adaptation
+will diverge genetically
+and may form Dob\-zhan\-sky-Mul\-ler incompatibilities,
+causing intrinsic postzygotic isolation
+\cite{orr01,kon02,kul04,coy04,lan07,sch09b,pre10}.
+%
+Under this scenario, we asked:
+how rapidly does postzygotic isolation evolve?
+what is the strength of genetic incompatibilities?
+and what are the relative contributions
+of compensatory and deleterious mutations to isolation?
+
+
+
+Using an artificial life system,
+we found that postzygotic isolation
+due to compensation was rapid:
+hybrids between compensated populations
+had significantly lower fitness
+than hybrids between populations that did not undergo compensation,
+regardless of the effect size
+of the initial deleterious mutations.
+%
+We also found that compensatory adaptation
+formed stronger genetic incompatibilities:
+the rate at which hybrid fitness
+decayed with the number of mutations
+was significantly greater
+for hybrids between compensated populations.
+%
+Finally, we found that both
+deleterious and compensatory mutations
+contributed to postzygotic isolation:
+hybrids with different proportions
+of compensatory and deleterious mutations
+were unfit unless all or none
+of both types of mutations were present.
+
+
+
+Two important implications to the genetics of postzygotic isolation
+can be drawn from our findings.
+%
+First, evidence of genotypic diversification between species
+may not correlate with phenotypic diversification.
+%
+This is because compensatory adaptation can build up genetic differences
+without altering phenotypic characteristics.
+%
+In fact, compensatory adaptation may act under stabilizing selection
+to maintain phenotypes despite continual accumulation of
+deleterious mutations \cite{har96}.
+%
+Second, evidence of positive selection
+at loci that contribute to speciation (`speciation genes')
+may not always be the result of diversification
+due to ecological adaptation
+but instead be the footprint of compensatory adaptation.
+%
+Our results corroborate the view that
+adaptation to the internal, genetic environment
+may be important in the development
+of intrinsic postzygotic isolation \cite{pre10,pha09}.
+
+
+
+In describing his mechanism of founder speciation, Ernst Mayr stated that
+``\dots\ the mere change of the genetic environment may change the
+selective value of a gene very considerably'' \cite{tem08}.
+%
+In cases where founder events cause the fixation or high frequency
+of deleterious mutations, compensatory adaptation may provide a
+mechanism by which genes with altered selective values change
+in allele frequency.
+%
+Furthermore, Templeton's model of genetic transilience recognizes
+that founder populations may be affected by genetic drift
+while new mutations and recombination increase genetic variation \cite{tem08}.
+%
+Genetic drift alone can raise the frequency of deleterious mutations
+in a founder population while increased genetic variation
+may introduce new compensatory mutations on which selection can act.
+%
+Our study using experimental evolution with populations of digital organisms
+suggests that such compensatory mutations can rapidly generate
+postzygotic barriers, and therefore supports a novel genetic mechanism
+for models of founder or peripatric speciation.
+% Check out paper:
+% Increased mitochondrial mutation frequency after an island colonization: positive selection or accumulation of slightly deleterious mutations?
+
+
+Our study took advantage
+of the recent implementation of sexual reproduction
+in the artificial life platform Avida \cite{mis06},
+and extended its application
+as proof of principle to the field of speciation.
+%
+We demonstrated that Avida is a useful tool to complement
+other approaches in speciation research as it allows for
+the direct observation of evolution and reproductive isolation in action.
+%
+Furthermore, our conclusions will motivate additional research
+into compensatory adaptation as a viable mechanism for speciation,
+to be further explored in biological systems.
+%
+The notion that organisms construct or choose
+their own microhabitats \cite{lew00}
+suggests that organisms are somewhat
+resilient to changes in the external environment.
+%
+This reduced emphasis on the external environment in evolution
+is supported by our conclusion that environmental differences
+between allopatric populations are not essential for genetic diversification.
+
+
+\section*{Materials and Methods}
+
+\subsection*{Avida}
+
+Experiments with digital organisms were carried out using Avida (ver.\ 2.9.0),
+freely available at http://avida.devosoft.org.
+%
+In Avida, digital organisms consist of a sequence of instructions (or `genome')
+that encodes their ability to replicate and perform computational functions.
+%
+Sexual reproduction between two organisms exchanges
+a random region of their genomes,
+then places one or two offspring back into the population \cite{mis06}.
+%
+Organisms are rewarded with a higher replication rate if they evolve
+the ability to perform computational functions,
+each of which requires a specific but not unique sequence of instructions.
+%
+Variation in the efficiency of replication and in the ability
+to perform functions arises via recombination and mutation.
+%
+Because faster replicators in a finite population leave
+more copies of themselves,
+digital organisms evolve via natural selection
+and genetic drift (i.e., evolution is not simulated).
+%
+Fitness, an estimate of an organism's reproductive rate,
+is measured as the amount of rewards obtained divided
+by the number of steps required to replicate.
+%
+Although there are many configurable settings in Avida (e.g., mutation rate),
+processes like natural selection and epistasis occur spontaneously.
+
+
+
+\section*{Strains and experimental conditions}
+
+The `default' digital organism could replicate
+but could not perform computational functions,
+and its genome length was 80 instructions.
+%
+The population size was set to 10,000 organisms,
+and the copy mutation probability was set to 0.0005 per instruction
+(i.e., 0.04 per genome per generation).
+%
+Other types of mutations, such as insertions or duplications,
+were not permitted because they may disrupt homologous recombination.
+%
+Digital organisms were configured to reproduce sexually,
+and the two recombinant offspring were set to replace random individuals
+in the population when no free space was available.
+%
+The `diverse' environment rewarded the nine computational functions
+commonly used in Avida experiments \cite{len03}.
+%
+The small genome size of digital organisms caused reversions
+to be common during compensatory adaptation in preliminary runs.
+%
+To guarantee that genotypic changes
+were due to mutations at secondary loci%
+---as has been observed in biological organisms \cite{bur99,est11}---%
+we prevented reversions from occurring.
+
+
+
+\section*{Isolation of mutants}
+
+For each treatment, we generated sets of 10,000 random mutant genotypes
+until either four mutants with the desired number of mutations and
+mutational effect size were found, or until 100 million mutants
+had been searched.
+%
+For small deleterious mutations, effect sizes of
+0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, and 0.1
+(each with up to a 0.0049 deviation) were identified for genotypes carrying
+1, 2, 3, 4, or 5 mutations.
+%
+For large deleterious mutations, mutants with effect sizes of
+0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, and 0.9 (with up to a 0.049 deviation)
+for each mutation number of 1, 2, 3, 4, and 5 were identified.
+%
+(Effect size is the difference between
+the fitnesses of the ancestral and the mutated genotype,
+relative to the ancestral genotype.)
+%
+We isolated a total of 339 small-effect mutants
+(after running the above procedure twice) and 133 large-effect mutants.
+%
+We implemented a different searching procedure for neutral mutations
+because the probability of several random mutations resulting
+in a neutral genotype was very low.
+%
+To find neutral mutants, we first generated 10,000 single-mutants
+and selected the first one that was neutral
+(i.e., relative fitness of exactly 1.0).
+%
+This procedure was repeated starting with the neutral mutant until
+the desired number of mutations was reached or until the
+recursion was exhausted.
+%
+We isolated a total of 74 neutral mutants.
+
+
+
+\section*{Compensated populations}
+
+We regarded a population as compensated if its most common genotype
+(i) reached a fitness of at least 1.0 relative to its ancestor,
+(ii) did not acquire mutations that were beneficial on their own, and
+(iii) did not acquire mutations that were deleterious when they first appeared.
+%
+To determine condition (ii), the fitness effect of each
+secondary mutation in the most common genotype of the population
+was tested in the genetic background of the ancestor.
+%
+If any `transformant' had a relative fitness above 1.0,
+then that population was not considered as compensated
+because mutations were beneficial on their own
+(i.e., generally beneficial, not compensatory).
+%
+To determine condition (iii), we sequentially examined the
+most common genotype of the population every 10 updates ($\sim$2.4 generations).
+%
+If the gain of any mutation resulted in a lower fitness than the
+genotype at the immediately preceding step (10 updates),
+then that population was not considered as compensated.
+
+
+\section*{Hybridization method}
+
+Hybrids were created by the same method in which Avida
+creates recombinants during sexual reproduction:
+the genetic region between two crossover points
+are exchanged between two parents to produce two offspring.
+%
+Hybridizations, whether between compensated populations
+and their ancestor or between pairs of compensated populations,
+involved creating every possible hybrid
+between the most common genotype in each population.
+
+
+\section*{Statistics}
+
+To compare the fitness of hybrids among treatments (Fig. \ref{fig1}),
+we determined wheth\-er their 95\% bootstrap confidence intervals overlapped.
+%
+For each treatment, bootstrap replicates were set to contain the
+same number of samples per ancestor---established as the mean number
+of observed samples per ancestor---in order to minimize any
+potential bias from the fact that ancestors yielded different
+numbers of compensated populations.
+%
+All bootstraps contained 10,000 replicates.
+%
+To determine the linear relationship between the number of mutations
+in hybrids and their fitness (Fig. \ref{fig2}),
+we fit a linear least squares model to each bootstrap replicate.
+%
+We compared the 95\% bootstrap confidence intervals of the slopes
+among treatments to establish the relative effect of mutation number
+on hybrid fitness.
+%
+Statistical analyses were performed in R (ver.\ 2.8.1).
+
+
+\section*{Acknowledgments}
+
+We thank R. E. Lenski, D. W. Schemske, and C. Ofria, I. Dworkin,
+and A. Gerstein for helpful discussion and comments on the manuscripts.
+%
+This work was supported by the Quantitative
+Biology Initiative at Michigan State University (MSU)
+and the BEACON Center for the Study of Evolution in Action.
+%
+Computational experiments were made possible by the
+High Performance Computing Center at MSU.
+%
+This material is based in part upon work supported
+by the National Science Foundation under Cooperative Agreement No. DBI-0939454.
+Any opinions, findings, and conclusions or recommendations
+expressed in this material are those of the authors
+and do not necessarily reflect the views of the National Science Foundation.
+
+\bibliographystyle{plos2009}
+\bibliography{comp_spp}
+
+\pagebreak
+
+\begin{figure}
+\caption{Fitness of hybrids after 25,000 updates of parental evolution.
+  Populations compensated for either small-effect or large-effect
+  deleterious mutations.
+  (A) Hybridizations between compensated genotypes and their ancestor.
+  (B) Hybridizations between pairs of compensated genotypes
+  sharing the same ancestor.
+  `Del. Alone' include only the initial deleterious mutations
+  before compensation,
+  `Comp. Alone' include only the compensatory mutations after compensation,
+  and `Del. + Comp.' include both deleterious and compensatory mutations.
+  `Control' include all mutations accumulated neutrally.
+  Error bars are 95\% bootstrap confidence intervals.}
+\label{fig1}
+\end{figure}
+
+
+
+\begin{figure}
+\caption{Strength of genetic incompatibilities in hybrids.
+  (A) Least squares linear fit of the mean number of mutations in hybrids
+  between ancestor and compensated genotypes (AC) against their mean fitness.
+  (B) Same as (A) except for hybrids between pairs of compensated genotypes
+  (CC). Insets: Means and 95\% bootstrap confidence intervals of each slope
+  where shared letters indicate overlapping confidence intervals.}
+\label{fig2}
+\end{figure}
+
+
+
+\begin{figure}
+\caption{Fitness of hybrids with intermediate parental contributions
+  of deleterious and compensatory mutations.
+  (A) Mean fitness of hybrids between the ancestor
+  and compensated parents that inherit the specified percent of small-effect
+  deleterious and compensatory mutations. (B) Same as (A) except for
+  large-effect deleterious mutations.}
+\label{fig3}
+\end{figure}
+
+
+
+\begin{table}
+\caption{Number of mutants and compensated populations per ancestor for
+  the different treatments}
+\begin{tabular}{lccc}
+Treatment & Ancestor & Mutants & Compensated \\
+\hline
+        & 1 & 25 & - \\
+Neutral & 2 & 25 & - \\
+        & 3 & 24 & - \\
+\hline
+        & 1 & 71  & 10 \\
+Small   & 2 & 199 & 15 \\
+        & 3 & 69  & 6  \\
+\hline
+        & 1 & 44  & 9 \\
+Large   & 2 & 44  & 5 \\
+        & 3 & 45  & 6 \\
+\hline
+\end{tabular}
+\label{tbl1}
+\end{table}
+
+\end{document}
