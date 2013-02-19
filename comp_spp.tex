@@ -45,55 +45,56 @@ can stem from intrinsic genetic mechanisms.
 
 \section*{Introduction}
 
-Biological speciation---%
-the evolution of reproductive isolation between pop\-u\-la\-tions---%
-is thought to be mostly driven by natural selection \cite{coy04,sch09,sob10}.
+Biological speciation is caused by the evolution of reproductive isolating
+barriers that prevent (or could prevent) gene flow between populations
+\cite{coy04}.
 %
-Selection can drive the fixation of alternative adaptive alleles
-in different populations, causing populations to diverge genetically.
+One such barrier that is well-studied is hybrid sterility or inviability
+due to developmental, physiological, or behavioral abnormalities
+regardless of the environment (`intrinsic postzygotic isolation').
 %
-Genetic divergence may lead to phenotypic differences
-between populations that prevent them from mating
-or from producing a zygote (`prezygotic isolation').
+Intrinsic postzygotic isolation is believed to commonly evolve
+through genetic incompatibilities: negative epistatic interactions
+among species-specific alleles inherited by the hybrids \cite{pre10}.
 %
-Genetic divergence may also lead to hybrid sterility or inviability,
-either because hybrids display intermediate phenotypes
-unsuited to the parental environments (`extrinsic postzygotic isolation')
-or because hybrids acquire developmental or physiological abnormalities
-that occur in any environment (`intrinsic postzygotic isolation').
+These species-specific alleles are thought to have been driven to fixation
+in each population mostly by natural selection,
+but the mechanisms of selection are often unknown \cite{sch09}.
 %
-Because postzygotic barriers act only after prezygotic barriers,
-postzygotic barriers are believed to contribute less
-to the total reproductive isolation than prezygotic barriers \cite{sch10};
-however, we know little about the relative contribution
-of pre- and postzygotic barriers during the speciation process.
+In order to understand the selection pressures that caused
+the fixation of alleles involved in hybrid incompatibilities,
+one must identify such alleles as well as their function
+and infer the mechanisms of selection \cite{sch09,pre10,nos11}.
+
+% (evolution of RI involves conflict resolution b/w genetic elements)
+% (Schluter 2009)
+
+Due to ever-improving methods in genetic mapping and molecular genetics,
+many `speciation genes' and their functions have been identified
+\cite{noo06,mah11}.
 %
-In any case, reproductive isolation is generally believed
-to be a by-product of adaptation to the external,
-ecological environment \cite{coy04,sob10}.
+(Examples/discussion on these genes; if known, what those genes are,
+what they're involved in, their names, species where they were found.)
+%Article: Adaptive evolution drives divergence of a hybrid incompatibility gene between two species of Drosophila.
+%
+Therefore, it has been suggested that intrinsic postzygotic isolation
+may be caused mainly by adaptation to the internal, genetic environment
+rather than the external, ecological environment \cite{pha09,pre10}.
 
 
-
-Some studies suggest, however, that some reproductive isolation
-may also result from adaptation to the internal, genetic environment
-\cite{pha09,pre10}.
-%
-For instance, deleterious mutations may accumulate in a population
-through genetic drift, hitchhiking with beneficial mutations,
-transient environmental changes, or spread of selfish genetic elements.
-%
-Compensatory mutations---secondary mutations that compensate
-for the effects of deleterious mutations---%
-may subsequently arise and spread through the population
+An interesting class of adaptation to the genetic environment
+is compensatory adaptation, in which secondary mutations
+compensate for the effects of deleterious mutations
 \cite{har96,bur99,moo00,lev00,mai02,est03,est11}.
 %
-Thus, compensatory mutation are a type of beneficial mutations
-that depend on the presence of one or more deleterious mutations
-(i.e., compensatory mutations are epistatic).
+Deleterious mutations may accumulate in a population
+through genetic drift, hitchhiking with beneficial mutations,
+transient environmental changes, or spread of selfish genetic elements
+\cite{pre10}. % Need citations for other mechanisms
 %
-Because stabilizing selection acts
-to maintain phenotypic function via compensatory adaptation,
-only genotypic, not phenotypic, change occurs~\cite{har96}.
+Because stabilizing selection acts to maintain phenotypic function
+via compensatory adaptation, only genotypic, not phenotypic, change occurs
+\cite{har96}.
 %
 As a result, populations that undergo compensatory adaptation
 in identical environments will diverge genetically, not phenotypically.
@@ -101,49 +102,72 @@ in identical environments will diverge genetically, not phenotypically.
 If compensatory adaptation can lead to genetic divergence,
 independent compensatory adaptation may contribute to
 intrinsic postzygotic isolation \cite{orr01,kon02,kul04,lan07,sch09b,pre10}.
-
-
-
-Intrinsic postzygotic isolation is often caused by
-Dob\-zhan\-sky-Mul\-ler incompatibilities (DMIs) \cite{coy04}---%
-negative interactions among alleles from different species appearing together
-in the hybrid's genetic background \cite{orr95}.
 %
 Deleterious and compensatory mutations accumulated in different populations
 may form DMIs in hybrids \cite{har96}, leading to hybrid inviability
 and potentially to complete postzygotic isolation.
-%
-In support of the hypothesis that compensatory adaptation
-may lead to an accummulation of DMIs,
-comparative studies have found that $\sim$10\%
-of amino acid differences between humans
-and several other mammals \cite{kon02}%
----and between different species of fruit flies \cite{kul04}---%
-are due to deleterious mutations and their associated compensatory mutations.
-%
-In addition, many genes known to form DMIs
-involve selfish genetic elements
-and their compensatory suppressors \cite{pre10}
-(selfish genetic elements are DNA sequences
-that replicate disproportionally to the rest
-of the genome and are therefore deleterious to the organism).
 
 
 
 Whether compensatory adaptation can lead to postzygotic isolation
 remains to be tested experimentally.
 %
-Such an experiment should be able to answer the following questions:
-(1)~how rapidly does postzygotic isolation evolve?
+Here we perform such an experiment to answer the following questions:
+(1)~does postzygotic isolation evolve from independent compensatory adaptation?
 (2)~what is the strength of genetic incompatibilities formed?
 and (3)~what is the relative contribution of compensatory mutations
 and deleterious mutations to postzygotic isolation?
 %
-Here we conduct experimental evolution
-of compensatory adaptation to answer these questions
-using Avida \cite{ofr04}, an artificial life system
+Answering these questions requires that we identify
+both deleterious and compensatory alleles,
+which involves genetic manipulations that test the allelic
+effects of each type of mutation.
+%
+Compensatory mutations must not be beneficial
+without the deleterious mutations compensate.
+%
+Such genetic manipulations are difficult even in
+systems where genetic tools have been greatly developed,
+and therefore we conduct our experiments using an artifial life system.
+
+
+
+Avida \cite{ofr04} is an artificial life system
 where populations of digital organisms
 evolve by natural selection and drift.
+The snowball effect can be tested in any genetic system---%
+biological or not---in which hybrid incompatibilities may evolve.
+%
+We used Avida \cite{ofr04}, a computer model of artificial life,
+to conduct experimental evolution and test the snowball effect.
+%
+Avida has been used previously to study various questions in evolution
+\cite{len99,len03,cho04,mis06,ele07,ele08,mis10}.
+%
+Digital organisms in Avida consist of a genome:
+a single (haploid) sequence of instructions that encodes
+their ability to replicate and perform computational functions.
+%
+Variation among organisms in their ability to perform functions
+and in their replication efficiency
+arises via random mutations and recombination.
+%
+Organisms that evolve the ability to perform functions
+are effectively rewarded with a greater replication rate.
+%
+Thus, inheritance, variation, and differential reproduction
+in digital organisms allow them to evolve
+via natural selection and genetic drift.
+%
+An organism's fitness was calculated based on the rewards
+obtained by performing tasks and its replication efficiency;
+organisms that could not replicate (i.e., sterile)
+were given a fitness of zero.
+%
+Avida has enabled research on evolving genetic systems
+that would have been difficult in natural systems \cite{ada06},
+and the similarities between digital and biological organisms
+in many evolutionary phenomena have been remarkable \cite{wil02,ada06}.
 %
 Avida enhances the benefits of microbial systems
 (i.e., short generation times, lots of replication,
